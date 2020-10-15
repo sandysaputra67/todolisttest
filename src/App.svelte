@@ -21,9 +21,6 @@ const todos = createTodos(initialTodos)
 	>
 
 	<div class='center'>
-<h1>
-	
-		</h1>
 		{#each $todos.filter(t => !t.done) as todo (todo.id)}
 			<label>
 				<input type=checkbox on:change={() => todos.toggle(todo, true)}>
@@ -37,7 +34,7 @@ const todos = createTodos(initialTodos)
 		test todolist
 		{#each $todos.filter(t => t.done) as todo (todo.id)}
 			<label
-				class="done"
+				class="test todolist"
 			>
 				<input type=checkbox checked on:change={() => todos.toggle(todo, false)}>
 				{todo.description}
